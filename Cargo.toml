@@ -1,0 +1,38 @@
+[package]
+name = "template"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bdk_wallet = { version = "1.1.0", features = ["rusqlite"] }
+bdk_chain = "0.21.1"
+bitcoin = "0.32.5"
+miniscript = "12.3.0"
+bdk_esplora = "0.20.1"
+bdk_sqlite = "0.2.0"
+
+[[bin]]
+name = "create_psbt"
+path = "src/create_psbt.rs"
+
+[[bin]]
+name = "full_scan"
+path = "src/full_scan.rs"
+
+[[bin]]
+name = "get_address"
+path = "src/get_address.rs"
+
+[[bin]]
+name = "create_wallet"
+path = "src/create_wallet.rs"
+
+[[bin]]
+name = "sign_and_broadcast_psbt"
+path = "src/sign_and_broadcast_psbt.rs"
+
+[[bin]]
+name = "wallet_sync"
+path = "src/wallet_sync.rs"
